@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+
+<a href="{{ base_path ~ '/conducteur'}}"><i class="fa fa-arrow-left" aria-hidden="true"></i> retour à la liste des conducteurs</a>
+
+<h1>Créer un conducteur :</h1>
+
+<form action="{{ base_path ~ '/conducteur'}}" method="post">
+
+    <div class="form-group">
+        <label for="">Prénom: </label>
+        <input type="text" class="form-control" placeholder="Prénom" name="prenom">
+    </div>
+
+    <div class="form-group">
+        <label for="">Nom : </label>
+        <input type="text" class="form-control" placeholder="Nom" name="nom">
+    </div>
+
+    <button class="btn btn-success">Créer un conducteur</button>
+
+</form>
+{% endblock %}

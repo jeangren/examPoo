@@ -12,4 +12,18 @@ class ConducteurController extends AbstractController {
             'conducteurs' => $conducteurs
         ]);
     }
+
+    public static function create() {
+        echo self::getTwig()->render('conducteur/create.html');
+    }
+
+    public static function new() {
+        $conducteur = new Conducteur;
+        $conducteur->setPrenom($_POST['prenom']);
+        $conducteur->setNom($_POST['nom']);
+        $conducteur->store();
+
+        self::index();
+    }
+
 }

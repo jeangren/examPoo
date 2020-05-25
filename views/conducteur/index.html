@@ -11,7 +11,7 @@
 <div class="alert alert-secondary">
 
     <a href="{{ base_path ~ '/conducteur/' ~ conducteur.id }}">
-                {{ conducteur.prenom }} (origine: {{ conducteur.nom }})
+        id : {{ conducteur.id }} <br> prénom : {{ conducteur.prenom }} <br>nom : {{ conducteur.nom }}
             </a>
 </div>
 {% endfor %} {% endblock %}
