@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+
+<a href="{{ base_path ~ '/vehicule'}}"><i class="fa fa-arrow-left" aria-hidden="true"></i> retour à la liste des conducteurs</a>
+
+<h1>Créer un conducteur :</h1>
+
+<form action="{{ base_path ~ '/vehicule'}}" method="post">
+
+    <div class="form-group">
+        <label for="">Marque </label>
+        <input type="text" class="form-control" placeholder="marque" name="marque" required>
+    </div>
+
+    <div class="form-group">
+        <label for="">modele : </label>
+        <input type="text" class="form-control" placeholder="modele" name="modele" required>
+    </div>
+    <div class="form-group">
+        <label for="">couleur : </label>
+        <input type="text" class="form-control" placeholder="couleur" name="couleur" required>
+    </div>
+
+    <div class="form-group">
+        <label for="">immatriculation : </label>
+        <input type="text" class="form-control" placeholder="immatriculation" name="immatriculation" required>
+    </div>
+    <button class="btn btn-success">ajouter un véhicule</button>
+
+</form>
+{% endblock %}
