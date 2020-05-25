@@ -12,3 +12,5 @@ $router->get('/animaux, 'AnimalController)
 
 $router->run();
 
+test
+
