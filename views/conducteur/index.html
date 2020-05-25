@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<a href="{{ base_path }}"><i class="fa fa-arrow-left" aria-hidden="true"></i> retour à la page d'accueil</a>
+<br>
+<a class="btn btn-primary" href="{{ base_path ~ '/conducteur/create' }}">Créer un conducteur</a>
+
+
+<h1>Liste des conducteurs</h1>
+
+{% for conducteur in conducteurs %}
+<div class="alert alert-secondary">
+
+    <a href="{{ base_path ~ '/conducteur/' ~ conducteur.id }}">
+                {{ conducteur.prenom }} (origine: {{ conducteur.nom }})
+            </a>
+</div>
+{% endfor %} {% endblock %}
