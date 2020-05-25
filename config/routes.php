@@ -8,9 +8,6 @@ $router->setNamespace('App\Controller');
 /**
  * Insérez vos routes ici
  */
-$router->get('/animaux, 'AnimalController)
 
 $router->run();
-
-test
 
